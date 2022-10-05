@@ -44,7 +44,7 @@ def boot_django():
                 },
             },
         ],
-        ROOT_URLCONF = "magicadmin.urls",
+        ROOT_URLCONF = "magicadmin.urls_testing",
         SECRET_KEY="S3CR3T-K3Y"
     )
     django.setup()

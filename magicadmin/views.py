@@ -6,6 +6,7 @@ from django.contrib.auth import login
 from django.shortcuts import render, redirect, get_object_or_404
 
 def login_view(request):
+    import ipdb; ipdb.set_trace()
     form = LoginForm(request.POST or None)
     already_used = True if request.GET.get('already_used', None) else False
 

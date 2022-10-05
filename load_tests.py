@@ -16,7 +16,6 @@ tests = [
 def get_suite(labels=tests):
     from django.test.runner import DiscoverRunner
     runner = DiscoverRunner(verbosity=1)
-    import ipdb; ipdb.set_trace()
     failures = runner.run_tests(labels)
     if failures:
         sys.exit(failures)
