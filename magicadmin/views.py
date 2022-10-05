@@ -6,7 +6,6 @@ from django.contrib.auth import login
 from django.shortcuts import render, redirect, get_object_or_404
 
 def login_view(request):
-    import ipdb; ipdb.set_trace()
     form = LoginForm(request.POST or None)
     already_used = True if request.GET.get('already_used', None) else False
 
@@ -32,7 +31,7 @@ def authenticate_view(request, magiclink):
     instance = get_object_or_404(MagicLink, secret_identifier = magiclink)
 
     if instance.already_used or (instance.expires_at.timestamp() < datetime.now().timestamp()):
-        return redirect("/admin/login-magic?already_used=true")
+        return redirect("/admin/login?already_used=true")
     
     instance.already_used = True
     instance.used_at = datetime.now()

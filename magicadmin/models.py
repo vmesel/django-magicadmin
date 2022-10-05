@@ -18,11 +18,15 @@ class MagicLink(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     already_used = models.BooleanField(default=False)
 
-    def get_login_url(self, request):
+    def get_login_url(self, request=None, complete = True):
         if not all((self.pk, self.created_at)):
             raise ("Unsaved Job models have no close URL")
 
         kwargs = {"magiclink": self.secret_identifier}
+
+        if not complete or not request:
+            return reverse("magic_login_validate", kwargs=kwargs)
+        
         return request.build_absolute_uri(reverse("magic_login_validate", kwargs=kwargs))
 
     class Meta:

@@ -70,7 +70,7 @@ class LoginForm(forms.Form):
         context = custom_context
         self._generate_magic_link()
         context["site"] = MAGICADMIN_CURRENT_WEBSITE
-        context["magiclink"] = self.user_magiclink.get_login_url(request)
+        context["magiclink"] = self.user_magiclink.get_login_url(request=request)
 
         plain_text = get_template(text_template)
         html_text = get_template(html_template)
