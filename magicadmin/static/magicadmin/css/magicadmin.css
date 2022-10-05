@@ -1,0 +1,12 @@
+.successnote {
+    font-size: 0.875rem;
+    display: block;
+    padding: 10px 12px;
+    margin: 0 0 10px 0;
+    color: var(--body-fg);
+    border: 1px solid var(--body-fg);;
+    border-radius: 4px;
+    background: var(--message-success-bg) url(/img/icon-yes.svg) 40px 12px no-repeat;
+    background-position: 5px 12px;
+    overflow-wrap: break-word;
+}

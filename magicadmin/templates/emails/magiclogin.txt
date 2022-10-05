@@ -1,0 +1,8 @@
+Hello!
+
+Here is your magic link to access {{site}}!
+
+{{magiclink}}
+
+Regards,
+{{site}} Admin
