@@ -31,7 +31,7 @@ def authenticate_view(request, magiclink):
     instance = get_object_or_404(MagicLink, secret_identifier = magiclink)
 
     if instance.already_used or (instance.expires_at.timestamp() < datetime.now().timestamp()):
-        return redirect("/admin/login-magic?already_used=true")
+        return redirect("/admin/login?already_used=true")
     
     instance.already_used = True
     instance.used_at = datetime.now()
