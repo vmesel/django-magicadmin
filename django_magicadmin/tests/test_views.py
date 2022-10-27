@@ -1,7 +1,7 @@
 from django.test import TestCase, Client
 from django.contrib.auth import get_user_model
 
-from magicadmin.models import MagicLink
+from django_magicadmin.models import MagicLink
 
 User = get_user_model()
 

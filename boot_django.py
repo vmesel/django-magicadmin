@@ -2,7 +2,7 @@ import os
 import django
 from django.conf import settings
 
-BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "magicadmin"))
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "django_magicadmin"))
 
 def boot_django():
     settings.configure(
@@ -20,7 +20,7 @@ def boot_django():
             "django.contrib.contenttypes",
             "django.contrib.sessions",
             "django.contrib.messages",
-            "magicadmin",
+            "django_magicadmin",
         ),
         TIME_ZONE="UTC",
         USE_TZ=True,
@@ -44,7 +44,7 @@ def boot_django():
                 },
             },
         ],
-        ROOT_URLCONF = "magicadmin.urls_testing",
+        ROOT_URLCONF = "django_magicadmin.urls_testing",
         SECRET_KEY="S3CR3T-K3Y"
     )
     django.setup()

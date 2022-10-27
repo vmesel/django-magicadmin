@@ -9,16 +9,16 @@ This is a plugin to facilitate django-admin login through magic links.
 
 ## Installation
 
- - `pip install django-magicadmin` on your system
+ - `pip install django-django_magicadmin` on your system
  - Add the following URL and include it in your main `urls.py`
 
 ```
-path("", include("magicadmin.urls")),
+path("", include("django_magicadmin.urls")),
 ```
  - Add the app to your INSTALLED_APPS
 ```
 INSTALLED_APPS = [
-    "magicadmin",
+    "django_magicadmin",
     ...
 ]
 ```
