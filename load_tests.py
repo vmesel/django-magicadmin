@@ -9,8 +9,8 @@ from boot_django import boot_django
 boot_django()
 
 tests = [
-    "magicadmin.tests.test_models",
-    "magicadmin.tests.test_views",
+    "django_magicadmin.tests.test_models",
+    "django_magicadmin.tests.test_views",
 ]
 
 def get_suite(labels=tests):

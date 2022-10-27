@@ -1,9 +1,11 @@
 [tool.poetry]
-name = "django-magicadmin"
+name = "django_magicadmin"
 version = "0.1.0"
 description = ""
 authors = ["Vinicius Mesel <me@vmesel.com>"]
 license = "MIT"
+readme = "README.md"
+keywords = ["django_magicadmin", "django magic login", "django app", "django auth"]
 
 [tool.poetry.dependencies]
 python = "^3.10"

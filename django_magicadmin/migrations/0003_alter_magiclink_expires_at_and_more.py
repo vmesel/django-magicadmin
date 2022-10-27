@@ -7,7 +7,7 @@ import uuid
 class Migration(migrations.Migration):
 
     dependencies = [
-        ("magicadmin", "0002_magiclink_already_used_and_more"),
+        ("django_magicadmin", "0002_magiclink_already_used_and_more"),
     ]
 
     operations = [

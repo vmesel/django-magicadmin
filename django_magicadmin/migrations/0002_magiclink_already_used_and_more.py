@@ -7,7 +7,7 @@ import uuid
 class Migration(migrations.Migration):
 
     dependencies = [
-        ("magicadmin", "0001_initial"),
+        ("django_magicadmin", "0001_initial"),
     ]
 
     operations = [
